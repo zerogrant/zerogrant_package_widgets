@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:zerogrant_package_widgets/zerogrant_widgets_extensions.dart';
 import 'package:zerogrant_package_widgets/l10n/app_localizations.dart';
 
-class ZerograntEmailInput extends StatefulWidget {
+class ZerograntPasswordInput extends StatefulWidget {
   final TextEditingController? controller;
-  const ZerograntEmailInput({super.key, this.controller});
+  const ZerograntPasswordInput({super.key, this.controller});
 
   @override
-  State<StatefulWidget> createState() => _ZerograntEmailInputState();
+  State<StatefulWidget> createState() => _ZerograntPasswordInputState();
 }
 
-class _ZerograntEmailInputState extends State<ZerograntEmailInput> {
+class _ZerograntPasswordInputState extends State<ZerograntPasswordInput> {
   @override
   Widget build(BuildContext context) {
     var translate = AppLocalizations.of(context);
 
     return TextFormField(
       controller: widget.controller,
-      keyboardType: TextInputType.emailAddress,
+      enableSuggestions: false,
+      autocorrect: false,
+      obscureText: true,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) {
         if (value == null || value.isEmpty) {
           return translate.inputEmpty;
-        } else if (!value.isValidEmail()) {
-          return translate.inputInvalidEmail;
+        } else if (value.length < 6) {
+          return translate.inputInvalidPassword;
         }
         return null;
       },

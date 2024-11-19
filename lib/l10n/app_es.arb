@@ -1,0 +1,5 @@
+{
+    "inputEmpty": "Por favor ingrese el texto.",
+    "inputInvalidEmail": "Por favor ingrese un email válido.",
+    "inputInvalidPassword": "La contraseña debe tener por lo menos 6 carácteres."
+}
