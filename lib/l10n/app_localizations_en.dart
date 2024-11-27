@@ -14,4 +14,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get inputInvalidPassword => 'Password must hav at least 6 characters.';
+
+  @override
+  String get inputEmailDefaultHint => 'Email';
+
+  @override
+  String get inputPasswordDefaultHint => 'Password';
 }

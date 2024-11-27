@@ -112,6 +112,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Password must hav at least 6 characters.'**
   String get inputInvalidPassword;
+
+  /// No description provided for @inputEmailDefaultHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get inputEmailDefaultHint;
+
+  /// No description provided for @inputPasswordDefaultHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get inputPasswordDefaultHint;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

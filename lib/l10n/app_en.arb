@@ -1,5 +1,7 @@
 {
     "inputEmpty": "Please enter some text.",
     "inputInvalidEmail": "Please type a valid email.",
-    "inputInvalidPassword": "Password must hav at least 6 characters."
+    "inputInvalidPassword": "Password must hav at least 6 characters.",
+    "inputEmailDefaultHint": "Email",
+    "inputPasswordDefaultHint": "Password"
 }
