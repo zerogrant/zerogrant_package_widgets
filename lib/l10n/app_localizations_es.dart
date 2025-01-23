@@ -20,4 +20,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get inputPasswordDefaultHint => 'Contraseña';
+
+  @override
+  String inputMaxLength(int maxLength) {
+    return 'la longitud del texto no puede superar los $maxLength carácteres';
+  }
 }

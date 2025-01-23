@@ -1,7 +1,15 @@
 {
     "inputEmpty": "Please enter some text.",
     "inputInvalidEmail": "Please type a valid email.",
-    "inputInvalidPassword": "Password must hav at least 6 characters.",
+    "inputInvalidPassword": "Password must have at least 6 characters.",
     "inputEmailDefaultHint": "Email",
-    "inputPasswordDefaultHint": "Password"
+    "inputPasswordDefaultHint": "Password",
+    "inputMaxLength": "The length of the text must not exceed {maxLength} characters.",
+    "@inputMaxLength": {
+        "placeholders": {
+          "maxLength": {
+            "type": "int"
+          }
+        }
+      }
 }

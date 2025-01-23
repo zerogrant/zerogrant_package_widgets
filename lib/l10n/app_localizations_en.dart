@@ -13,11 +13,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get inputInvalidEmail => 'Please type a valid email.';
 
   @override
-  String get inputInvalidPassword => 'Password must hav at least 6 characters.';
+  String get inputInvalidPassword => 'Password must have at least 6 characters.';
 
   @override
   String get inputEmailDefaultHint => 'Email';
 
   @override
   String get inputPasswordDefaultHint => 'Password';
+
+  @override
+  String inputMaxLength(int maxLength) {
+    return 'The length of the text must not exceed $maxLength characters.';
+  }
 }

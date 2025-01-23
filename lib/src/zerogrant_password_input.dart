@@ -53,6 +53,8 @@ class _ZerograntPasswordInputState extends State<ZerograntPasswordInput> {
           return translate.inputEmpty;
         } else if (value.length < 6) {
           return translate.inputInvalidPassword;
+        } else if (value.length > InputConstants.maxLength) {
+          return translate.inputMaxLength(InputConstants.maxLength);
         }
         return null;
       },

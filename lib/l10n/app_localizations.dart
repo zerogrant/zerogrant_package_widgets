@@ -110,7 +110,7 @@ abstract class AppLocalizations {
   /// No description provided for @inputInvalidPassword.
   ///
   /// In en, this message translates to:
-  /// **'Password must hav at least 6 characters.'**
+  /// **'Password must have at least 6 characters.'**
   String get inputInvalidPassword;
 
   /// No description provided for @inputEmailDefaultHint.
@@ -124,6 +124,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Password'**
   String get inputPasswordDefaultHint;
+
+  /// No description provided for @inputMaxLength.
+  ///
+  /// In en, this message translates to:
+  /// **'The length of the text must not exceed {maxLength} characters.'**
+  String inputMaxLength(int maxLength);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -3,5 +3,13 @@
     "inputInvalidEmail": "Por favor ingrese un email válido.",
     "inputInvalidPassword": "La contraseña debe tener por lo menos 6 carácteres.",
     "inputEmailDefaultHint": "Email",
-    "inputPasswordDefaultHint": "Contraseña"
+    "inputPasswordDefaultHint": "Contraseña",
+    "inputMaxLength": "la longitud del texto no puede superar los {maxLength} carácteres",
+    "@inputMaxLength": {
+        "placeholders": {
+          "maxLength": {
+            "type": "int"
+          }
+        }
+      }
 }

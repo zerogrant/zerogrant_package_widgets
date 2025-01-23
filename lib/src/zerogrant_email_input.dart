@@ -51,6 +51,8 @@ class _ZerograntEmailInputState extends State<ZerograntEmailInput> {
           return translate.inputEmpty;
         } else if (!value.isValidEmail()) {
           return translate.inputInvalidEmail;
+        } else if (value.length > InputConstants.maxLength) {
+          return translate.inputMaxLength(InputConstants.maxLength);
         }
         return null;
       },
