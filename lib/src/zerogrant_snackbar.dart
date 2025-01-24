@@ -6,7 +6,7 @@ void zerograntSnackbar({required BuildContext context, required String text}) {
   DelightToastBar(
     autoDismiss: true,
     builder: (context) => ToastCard(
-      shadowColor: Theme.of(context).colorScheme.primary,
+      shadowColor: Theme.of(context).colorScheme.primary.withAlpha(50),
       leading: Icon(
         Icons.info,
         size: 28,

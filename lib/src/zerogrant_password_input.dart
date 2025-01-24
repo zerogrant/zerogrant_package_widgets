@@ -13,6 +13,8 @@ class ZerograntPasswordInput extends StatefulWidget {
 }
 
 class _ZerograntPasswordInputState extends State<ZerograntPasswordInput> {
+  bool textCovered = true;
+
   @override
   Widget build(BuildContext context) {
     var translate = AppLocalizations.of(context);
@@ -21,7 +23,7 @@ class _ZerograntPasswordInputState extends State<ZerograntPasswordInput> {
       controller: widget.controller,
       enableSuggestions: false,
       autocorrect: false,
-      obscureText: true,
+      obscureText: textCovered,
       autovalidateMode: AutovalidateMode.onUnfocus,
       keyboardType: TextInputType.visiblePassword,
       cursorColor: Theme.of(context).colorScheme.primary,
@@ -30,24 +32,32 @@ class _ZerograntPasswordInputState extends State<ZerograntPasswordInput> {
         FocusScope.of(context).unfocus();
       },
       decoration: InputDecoration(
-        border: const OutlineInputBorder(
-          borderRadius:
-              BorderRadius.all(Radius.circular(InputConstants.radius)),
-        ),
-        labelText: widget.placeHolder ?? translate.inputPasswordDefaultHint,
-        enabledBorder: OutlineInputBorder(
-          borderRadius:
-              const BorderRadius.all(Radius.circular(InputConstants.radius)),
-          borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.primary, width: 2),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius:
-              const BorderRadius.all(Radius.circular(InputConstants.radius)),
-          borderSide:
-              BorderSide(color: Theme.of(context).colorScheme.error, width: 2),
-        ),
-      ),
+          border: const OutlineInputBorder(
+            borderRadius:
+                BorderRadius.all(Radius.circular(InputConstants.radius)),
+          ),
+          labelText: widget.placeHolder ?? translate.inputPasswordDefaultHint,
+          enabledBorder: OutlineInputBorder(
+            borderRadius:
+                const BorderRadius.all(Radius.circular(InputConstants.radius)),
+            borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.primary, width: 2),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius:
+                const BorderRadius.all(Radius.circular(InputConstants.radius)),
+            borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.error, width: 2),
+          ),
+          suffixIcon: IconButton(
+              onPressed: () {
+                setState(() {
+                  textCovered = !textCovered;
+                });
+              },
+              icon: Icon(textCovered
+                  ? Icons.visibility_rounded
+                  : Icons.visibility_off_rounded))),
       validator: (value) {
         if (value == null || value.isEmpty) {
           return translate.inputEmpty;

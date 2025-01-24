@@ -16,3 +16,20 @@ class ZerograntH1Text extends StatelessWidget {
     );
   }
 }
+
+class ZerograntLabelText extends StatelessWidget {
+  final String text;
+
+  const ZerograntLabelText({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 12,
+        color: Color(0xff898989),
+      ),
+    );
+  }
+}
